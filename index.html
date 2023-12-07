@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mentorship Session Scheduling</title>
+</head>
+<body>
+    <div class="container">
+        <form id="sessionForm" onsubmit="return validateForm()">
+            <label for="menteeName">Mentee's Name <span class="required">*</span>:</label>
+            <input type="text" id="menteeName" name="menteeName" required>
+
+            <label for="sessionDate">Session Date <span class="required">*</span>:</label>
+            <input type="date" id="sessionDate" name="sessionDate" required>
+
+            <label for="sessionTime">Session Time <span class="required">*</span>:</label>
+            <input type="time" id="sessionTime" name="sessionTime" required>
+
+            <label for="sessionNotes">Session Notes (Optional):</label>
+            <textarea id="sessionNotes" name="sessionNotes" rows="4"></textarea>
+
+            <button type="submit">Schedule Session</button>
+        </form>
+        <div id="errorMessage"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
